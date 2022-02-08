@@ -12,6 +12,7 @@ npm install -g json-server
 ## Start JSON Server
 ```
 json-server --watch db.json (http://localhost:3000/blogPosts)
+There is already db.json and have dummy JSON as well
 ```
 ### Compiles and hot-reloads for development
 ```
