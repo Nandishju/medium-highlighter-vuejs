@@ -31,7 +31,8 @@
 .nav {
   font-family: 'Roboto', sans-serif;
   padding: 12px 24px;
-box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.05);
+  background: #f8f8f8;
 
   &__left {
     display: flex;

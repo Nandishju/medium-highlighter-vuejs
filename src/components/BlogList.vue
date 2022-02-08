@@ -41,26 +41,13 @@ export default {
 
   
   methods: {
-    // async getAllPostData() {
-    //   this.loading = true;
-    //   try {
-    //     const response = await axios(`${URL}`);
-    //     this.blogs = response.data.slice(0, 10);
-    //     this.$store.commit("setBlogData", this.blogs);
-    //   } catch (err) {
-    //     console.error(err);
-    //   } finally {
-    //     this.loading = false;
-    //   }
-    // }
-    ...mapActions(["fetchUsers", "deleteUser"])
-
+    ...mapActions(["fetchBlogs"])
   },
   computed: mapGetters(["blogPostsList"]),
   created() {
     // this.getAllPostData();
     console.log("blogPostsList", this.blogPostsList)
-    this.fetchUsers();
+    this.fetchBlogs();
   },
   
 };

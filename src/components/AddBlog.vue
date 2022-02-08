@@ -43,24 +43,28 @@ export default {
   
   computed: mapGetters(["cardsList"]),
     created() {
-      this.fetchUsers()
+      this.fetchBlogs()
     },
   methods: {
-     ...mapActions(["addUsers"]),
+     ...mapActions(["addBlogsUses"]),
     onBlogSubmit() {
       if (this.title == '' || this.author == '' || this.content == '') {
         alert("Please fill all the fields")
       }
       else{
-         this.addUsers({
+         this.addBlogsUses({
           id: this.id,
           title: this.title,
           author: this.author,
           content: this.content
         })
-      }     
+      }    
+      this.id = ''
+      this.title = '',
+       this.author = '',
+       this.content = ''
     },
-     ...mapActions(["fetchUsers", "deleteUser"]),
+     ...mapActions(["fetchBlogs", "deleteUser"]),
 
   }
 };
